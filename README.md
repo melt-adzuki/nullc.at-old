@@ -1,9 +1,9 @@
 # nullnyat.com
 
-- https://nullnyat.com/t
-- https://nullnyat.com/g
-- https://nullnyat.com/p
-- https://nullnyat.com/d
-- https://nullnyat.com/d_s
-- https://nullnyat.com/k
-- https://nullnyat.com/s
+- https://nullnyat.com/t (twitter)
+- https://nullnyat.com/g (github)
+- https://nullnyat.com/p (pixiv)
+- https://nullnyat.com/d (discord)
+- https://nullnyat.com/d_s (discord-server)
+- https://nullnyat.com/k (keybase)
+- https://nullnyat.com/s (steam)
