@@ -1,4 +1,4 @@
-# nullnyat.com
+# Links
 
 - https://nullnyat.com/t (twitter)
 - https://nullnyat.com/g (github)
