@@ -7,3 +7,4 @@
 - https://nullnyat.com/d_s (discord Server)
 - https://nullnyat.com/k (keybase)
 - https://nullnyat.com/s (steam)
+- https://nullnyat.com/f (fanbox)
