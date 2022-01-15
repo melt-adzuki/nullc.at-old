@@ -87,9 +87,6 @@ export default class IndexPage extends Vue
       id: 2, serviceName: "Discord", description: "nullnyat#0001", link: "https://discord.com/users/839568515848470538",
     },
     {
-      id: 3, serviceName: "Discord", description: "公式サーバー", link: "https://discord.gg/HamuSm98mC",
-    },
-    {
       id: 4, serviceName: "Keybase", description: "nullnyat", link: "https://keybase.io/nullnyat",
     },
     {
