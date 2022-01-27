@@ -4,7 +4,7 @@
       <div class="shape-background color-bg-background" />
       <div class="shape color-bg-backgroundBlue" />
       <b-container class="z-index-1 d-flex flex-column align-items-center justify-content-center">
-        <img alt="Hi" class="mb-2 mb-md-5" width="128" src="~/static/img/nullcat/hi_nullcat.png">
+        <img alt="Hi" class="mb-2 mb-md-5" width="128" src="~/assets/img/nullcat/hi_nullcat.png">
         <JumboLogo />
       </b-container>
     </div>
@@ -14,7 +14,7 @@
         <b-row>
           <div class="col-md w-100">
             <div class="d-flex flex-column align-items-center justify-content-center h-100 z-index-1">
-              <img alt="Nyan!" class="mb-3" width="128" src="~/static/img/nullcat/nyan_nullcat.png">
+              <img alt="Nyan!" class="mb-3" width="128" src="~/assets/img/nullcat/nyan_nullcat.png">
               <h2 class="text-center">
                 About
               </h2>
@@ -55,7 +55,7 @@
       <section id="links" class="container p-5">
         <div class="col-md w-100 mb-5">
           <div class="d-flex flex-column align-items-center justify-content-center h-100">
-            <img alt="びびびびびびっ" class="mb-3" width="128" src="~/static/img/nullcat/bibibi_nullcat.png">
+            <img alt="びびびびびびっ" class="mb-3" width="128" src="~/assets/img/nullcat/bibibi_nullcat.png">
             <h2 class="text-center">
               Links
             </h2>
