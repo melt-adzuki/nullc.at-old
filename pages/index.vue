@@ -63,7 +63,7 @@
         </div>
 
         <b-row>
-          <b-col v-for="item in linksMeta" :key="item.id" class="d-flex w-100 justify-content-center align-items-center mb-5">
+          <b-col v-for="item in linksMetaWithIndex" :key="item.id" class="d-flex w-100 justify-content-center align-items-center mb-5">
             <CardButton :service-name="item.serviceName" :description="item.description" :link="item.link" />
           </b-col>
         </b-row>
@@ -76,29 +76,40 @@
 import Vue from "vue"
 import Component from "vue-class-component"
 
+type LinksMeta = { serviceName: string, description: string, link: string }
+
 @Component
 export default class IndexPage extends Vue
 {
-  linksMeta = [
+  private linksMeta: LinksMeta[] = [
     {
-      id: 1, serviceName: "Twitter", description: "nullnyat", link: "https://twitter.com/nullnyat",
+      serviceName: "Twitter", description: "nullnyat", link: "https://twitter.com/nullnyat",
     },
     {
-      id: 2, serviceName: "Discord", description: "nullnyat#3595", link: "https://discord.com/users/839568515848470538",
+      serviceName: "Discord", description: "nullnyat#3595", link: "https://discord.com/users/839568515848470538",
     },
     {
-      id: 3, serviceName: "Keybase", description: "nullnyat", link: "https://keybase.io/nullnyat",
+      serviceName: "Keybase", description: "nullnyat", link: "https://keybase.io/nullnyat",
     },
     {
-      id: 4, serviceName: "GitHub", description: "nullnyat", link: "https://github.com/nullnyat",
+      serviceName: "GitHub", description: "nullnyat", link: "https://github.com/nullnyat",
     },
     {
-      id: 5, serviceName: "Steam", description: "nullnyat", link: "https://steamcommunity.com/id/nullnyat",
+      serviceName: "Steam", description: "nullnyat", link: "https://steamcommunity.com/id/nullnyat",
     },
     {
-      id: 6, serviceName: "Origin", description: "nullnyat", link: "https://www.origin.com/jpn/ja-jp/profile/user/BcMVy9jix55EDn_JfEXUMw--",
+      serviceName: "Origin", description: "nullnyat", link: "https://www.origin.com/jpn/ja-jp/profile/user/BcMVy9jix55EDn_JfEXUMw--",
     },
   ]
+
+  public get linksMetaWithIndex()
+  {
+    const linksMetaWithIndex: Array<LinksMeta & { index: number }> = []
+
+    this.linksMeta.forEach((object, index) => linksMetaWithIndex.push({ index, ...object }))
+
+    return linksMetaWithIndex
+  }
 }
 </script>
 
