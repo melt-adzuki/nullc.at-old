@@ -87,16 +87,16 @@ export default class IndexPage extends Vue
       id: 2, serviceName: "Discord", description: "nullnyat#3595", link: "https://discord.com/users/839568515848470538",
     },
     {
-      id: 4, serviceName: "Keybase", description: "nullnyat", link: "https://keybase.io/nullnyat",
+      id: 3, serviceName: "Keybase", description: "nullnyat", link: "https://keybase.io/nullnyat",
     },
     {
-      id: 5, serviceName: "GitHub", description: "nullnyat", link: "https://github.com/nullnyat",
+      id: 4, serviceName: "GitHub", description: "nullnyat", link: "https://github.com/nullnyat",
     },
     {
-      id: 6, serviceName: "Steam", description: "nullnyat", link: "https://steamcommunity.com/id/nullnyat",
+      id: 5, serviceName: "Steam", description: "nullnyat", link: "https://steamcommunity.com/id/nullnyat",
     },
     {
-      id: 7, serviceName: "Origin", description: "nullnyat", link: "https://www.origin.com/jpn/ja-jp/profile/user/BcMVy9jix55EDn_JfEXUMw--",
+      id: 6, serviceName: "Origin", description: "nullnyat", link: "https://www.origin.com/jpn/ja-jp/profile/user/BcMVy9jix55EDn_JfEXUMw--",
     },
   ]
 }
