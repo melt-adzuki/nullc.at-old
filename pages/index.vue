@@ -1,75 +1,50 @@
-<template>
-  <div class="color-bg-background">
-    <div class="hero d-flex align-items-center justify-content-center position-relative">
-      <div class="shape-background color-bg-background" />
-      <div class="shape color-bg-backgroundBlue" />
-      <b-container class="z-index-1 d-flex flex-column align-items-center justify-content-center">
-        <img alt="Hi" class="mb-2 mb-md-5" width="128" src="~/assets/img/nullcat/hi_nullcat.png">
-        <JumboLogo />
-      </b-container>
-    </div>
+<template lang="pug">
+  .color-bg-background
+    .hero.d-flex.align-items-center.justify-content-center.position-relative
+      .shape-background.color-bg-background
+        .shape.color-bg-backgroundBlue
+      b-container.z-index-1.d-flex.flex-column.align-items-center.justify-content-center
+        img.mb-2.mb-md-5(alt="Hi" width="128" src="@/assets/img/nullcat/hi_nullcat.png")
+        JumboLogo
+    article
+      section#about.container.p-5
+        b-row
+          .col-md.w-100
+            .d-flex.flex-column.align-items-center.justify-content-center.h-100.z-index-1
+              img.mb-3(alt="Nyan!"  width="128" src="@/assets/img/nullcat/nyan_nullcat.png")
+              h2.text-center About
+          .col-md.d-flex.align-items-center.w-100
+            b-row.w-100
+              .col-md
+                h3 自己紹介
+                p Nullcat chan!
+                p 2004/8/26
+                h3 ゲーム
+                ul
+                  li APEX
+                  li Valorant
+                  li VRChat
 
-    <article>
-      <section id="about" class="container p-5">
-        <b-row>
-          <div class="col-md w-100">
-            <div class="d-flex flex-column align-items-center justify-content-center h-100 z-index-1">
-              <img alt="Nyan!" class="mb-3" width="128" src="~/assets/img/nullcat/nyan_nullcat.png">
-              <h2 class="text-center">
-                About
-              </h2>
-            </div>
-          </div>
+                h3 すき
+                ul
+                  li 絵をかく
+                  li ゲーム
+                  li 曲をきく
 
-          <div class="col-md d-flex align-items-center w-100">
-            <b-row class="w-100">
-              <div class="col-md">
-                <h3>自己紹介</h3>
-                <p>Nullcat chan!</p>
-                <p>2004/8/26</p>
-                <h3>ゲーム</h3>
-                <ul>
-                  <li>APEX</li>
-                  <li>Valorant</li>
-                  <li>VRChat</li>
-                </ul>
-                <h3>すき</h3>
-                <ul>
-                  <li>絵をかく</li>
-                  <li>ゲーム</li>
-                  <li>曲をきく</li>
-                </ul>
-              </div>
-              <div class="col-md">
-                <h3>好きなキャラ</h3>
-                <ul>
-                  <li>ポッチャマ</li>
-                  <li>ポチャッコ</li>
-                </ul>
-              </div>
-            </b-row>
-          </div>
-        </b-row>
-      </section>
+              .col-md
+                h3 好きなキャラ
+                ul
+                  li ポッチャマ
+                  li ポチャッコ
+      section#links.container.p-5
+        .col-md.w-100.mb-5
+          .d-flex.flex-column.align-items-center.justify-content-center.h-100
+            img.mb-3(alt="びびびびびびっ" width="128" src="@/assets/img/nullcat/bibibi_nullcat.png")
+            h2.text-center Links
 
-      <section id="links" class="container p-5">
-        <div class="col-md w-100 mb-5">
-          <div class="d-flex flex-column align-items-center justify-content-center h-100">
-            <img alt="びびびびびびっ" class="mb-3" width="128" src="~/assets/img/nullcat/bibibi_nullcat.png">
-            <h2 class="text-center">
-              Links
-            </h2>
-          </div>
-        </div>
-
-        <b-row>
-          <b-col v-for="item in linksMetaWithIndex" :key="item.id" class="d-flex w-100 justify-content-center align-items-center mb-5">
-            <CardButton :service-name="item.serviceName" :description="item.description" :link="item.link" />
-          </b-col>
-        </b-row>
-      </section>
-    </article>
-  </div>
+        b-row
+          b-col.d-flex.w-100.justify-content-center.align-items-center.mb-5(v-for="item in linksMetaWithIndex" :key="item.id")
+            CardButton(:service-name="item.serviceName" :description="item.description" :link="item.link")
 </template>
 
 <script lang="ts">

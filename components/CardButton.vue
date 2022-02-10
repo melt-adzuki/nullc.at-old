@@ -1,11 +1,10 @@
-<template>
-  <a target="_blank" :href="link" class="text-reset text-decoration-none">
-    <div class="card-button d-flex flex-column shadow-sm text-center rounded">
-      <h4 class="pt-5 mb-5 color-fg-black">{{ serviceName }}</h4>
-      <span class="m-0"><component :is="iconName" class="icon" /></span>
-      <p class="color-bg-backgroundBlue p-4 m-0 mt-auto h-25 rounded-bottom">{{ description }}</p>
-    </div>
-  </a>
+<template lang="pug">
+  a(target="_blank" :href="link").text-reset.text-decoration-none
+    .card-button.d-flex.flex-column.shadow-sm.text-center.rounded
+      h4.pt-5.mb-5.color-fg-black {{ serviceName }}
+      span.m-0
+        component(:is="iconName").icon
+      p.color-bg-backgroundBlue.p-4.m-0.mt-auto.h-25.rounded-bottom {{ description }}
 </template>
 
 <script lang="ts">
