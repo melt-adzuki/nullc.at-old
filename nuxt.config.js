@@ -15,7 +15,7 @@ export default {
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [
-      { rel: "icon", href: "/img/nullcat/nyan_nullcat.png" },
+      { rel: "icon", href: "/favicon.png" },
     ],
   },
 

@@ -1,11 +1,9 @@
-<template>
-  <div>
+<template lang="pug">
+  div
     <BaseHeader />
-    <main>
+    main
       <Nuxt />
-    </main>
     <BaseFooter />
-  </div>
 </template>
 
 <script lang="ts">
