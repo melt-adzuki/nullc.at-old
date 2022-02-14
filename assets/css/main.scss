@@ -4,6 +4,11 @@ body {
     color: map-get($nyanCS, "white");
 }
 
+// github markdown css
+.markdown-body {
+    pre > code { color: map-get($nyanCS, "brightBlue")  !important }
+}
+
 @each $key, $color in $nyanCS {
     .color-bg-#{$key} {
         background-color: #{$color};
