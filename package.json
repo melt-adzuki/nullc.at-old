@@ -12,6 +12,7 @@
     "lintfix": "yarn lint:js --fix"
   },
   "dependencies": {
+    "@types/marked": "^4.0.2",
     "bootstrap": "^4.6.1",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.19.3",
