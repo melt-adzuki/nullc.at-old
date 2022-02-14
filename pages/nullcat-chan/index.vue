@@ -1,5 +1,6 @@
 <template lang="pug">
-  .markdown-body.color-bg-backgroundBlue.p-4(v-html="markdownToHtml()")
+  .markdown-body.color-bg-backgroundBlue.p-4
+    .container(v-html="markdownToHtml()")
 </template>
 
 <script lang="ts">
