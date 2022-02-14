@@ -1,11 +1,10 @@
 <template lang="pug">
-  .markdown-body.color-bg-backgroundBlue.p-4
-    .container(v-html="markdownToHtml()")
+  .markdown-body.color-bg-blue.p-4
+    .container(v-html="markdownToHtml")
 </template>
 
 <script lang="ts">
-import Vue from "vue"
-import Component from "vue-class-component"
+import { Component, Vue } from "nuxt-property-decorator"
 import { marked } from "marked"
 
 @Component
@@ -13,7 +12,14 @@ export default class NullcatChanPage extends Vue
 {
   public content = ""
 
-  private async fetch()
+  head()
+  {
+    return {
+      title: "Nullcat chan!",
+    }
+  }
+
+  private async fetchMd()
   {
     const apiUrl = "https://api.github.com"
     const repoUrl = "/repos/NullCatSlave/Nullcatchan"
@@ -30,14 +36,14 @@ export default class NullcatChanPage extends Vue
     this.content = Buffer.from(data.content, "base64").toString()
   }
 
-  public markdownToHtml()
+  public get markdownToHtml()
   {
     return marked(this.content)
   }
 
   async created()
   {
-    await this.fetch()
+    await this.fetchMd()
   }
 }
 </script>

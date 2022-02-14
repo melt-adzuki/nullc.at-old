@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Nullcat chan!",
+    titleTemplate: (title) => `${title ? (`${title} | `) : ""}nullc.at`,
     htmlAttrs: {
       lang: "ja",
     },

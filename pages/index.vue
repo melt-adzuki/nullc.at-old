@@ -1,12 +1,12 @@
 <template lang="pug">
-  .color-bg-background
+  .color-bg-black
     .hero.d-flex.align-items-center.justify-content-center.position-relative
-      .shape-background.color-bg-background
-        .shape.color-bg-backgroundBlue
+      .shape-black.color-bg-black
+        .shape.color-bg-blue
       b-container.z-index-1.d-flex.flex-column.align-items-center.justify-content-center
-        img.mb-2.mb-md-5(alt="Hi" width="128" src="@/assets/img/nullcat/hi_nullcat.png")
+        img(alt="Hi" width="400" src="@/assets/img/nullcat/icon_nullcat.png")
         JumboLogo
-    article
+    article.color-fg-white
       section#about.container.p-5
         b-row
           .col-md.w-100
@@ -17,7 +17,7 @@
             b-row.w-100
               .col-md
                 h3 自己紹介
-                p Nullcat chan!
+                p NullCat
                 p 2004/8/26
                 h3 ゲーム
                 ul
@@ -48,17 +48,30 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue"
-import Component from "vue-class-component"
+import { Component, Vue } from "nuxt-property-decorator"
 
 type LinksMeta = { serviceName: string, description: string, link: string }
 
 @Component
 export default class IndexPage extends Vue
 {
+  head()
+  {
+    return {
+      titleTemplate: "",
+      title: "nullc.at",
+    }
+  }
+
   private linksMeta: LinksMeta[] = [
     {
       serviceName: "Twitter", description: "nullnyat", link: "https://twitter.com/nullnyat",
+    },
+    {
+      serviceName: "GitHub", description: "nullnyat", link: "https://github.com/nullnyat",
+    },
+    {
+      serviceName: "Pixiv", description: "nullnyat", link: "https://www.pixiv.net/users/74107311",
     },
     {
       serviceName: "Discord", description: "nullnyat#3595", link: "https://discord.com/users/839568515848470538",
@@ -67,21 +80,13 @@ export default class IndexPage extends Vue
       serviceName: "Keybase", description: "nullnyat", link: "https://keybase.io/nullnyat",
     },
     {
-      serviceName: "GitHub", description: "nullnyat", link: "https://github.com/nullnyat",
-    },
-    {
-      serviceName: "Steam", description: "nullnyat", link: "https://steamcommunity.com/id/nullnyat",
-    },
-    {
-      serviceName: "Origin", description: "nullnyat", link: "https://www.origin.com/jpn/ja-jp/profile/user/BcMVy9jix55EDn_JfEXUMw--",
+      serviceName: "Steam", description: "nullnyat", link: "https://steamcommunity.com/profiles/76561199215911227",
     },
   ]
 
   public get linksMetaWithIndex()
   {
-    const linksMetaWithIndex: Array<LinksMeta & { index: number }> = []
-
-    this.linksMeta.forEach((object, index) => linksMetaWithIndex.push({ index, ...object }))
+    const linksMetaWithIndex: Array<LinksMeta & { index: number }> = this.linksMeta.map((object, index) => ({ index, ...object }))
 
     return linksMetaWithIndex
   }
@@ -93,7 +98,7 @@ export default class IndexPage extends Vue
   height: 45rem;
 }
 
-.shape-background {
+.shape-black {
   position: absolute;
   top: 0;
   left: 0;
