@@ -12,4 +12,7 @@
             a.nav-link.color-fg-white(href="#about") About
           li: .nav-item
             a.nav-link.color-fg-white(href="#links") Links
+          li: .nav-item
+            a.nav-link.color-fg-white(href="/nullcat-chan")
+              img.mb-2.mr-0.mb-md-0.mr-md-2(alt="Nullcat chan", width="40", src="@/assets/img/nullcat/hi_nullcat.png")
 </template>
