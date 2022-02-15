@@ -1,50 +1,18 @@
 <template lang="pug">
-  .color-bg-black
-    .hero.d-flex.align-items-center.justify-content-center.position-relative
-      .shape-black.color-bg-black
-        .shape.color-bg-blue
-      b-container.z-index-1.d-flex.flex-column.align-items-center.justify-content-center
-        img.rounded-pill(alt="Hi" width="400" src="@/assets/img/nullcat/icon_nullcat.png")
-        JumboLogo
-    article.color-fg-white
-      section#about.container.p-5
-        b-row
-          .col-md.w-100
-            .d-flex.flex-column.align-items-center.justify-content-center.h-100.z-index-1
-              img.mb-3(alt="Nyan!"  width="128" src="@/assets/img/nullcat/nyan_nullcat.png")
-              h2.text-center About
-          .col-md.d-flex.align-items-center.w-100
-            b-row.w-100
-              .col-md
-                h3 自己紹介
-                p NullCat
-                p 2004/8/26
-                h3 ゲーム
-                ul
-                  li APEX
-                  li Valorant
-                  li VRChat
+.color-bg-black
+	.d-flex.flex-column.align-items-center.justify-content-center.position-relative.vh-100
+		.shape-black.color-bg-black
+			.shape.color-bg-blue
 
-                h3 すき
-                ul
-                  li 絵をかく
-                  li ゲーム
-                  li 曲をきく
+		section.container.z-index-1.d-flex.flex-column.align-items-center.justify-content-center.py-5
+			img.rounded-pill(alt="Icon" width="400" src="@/assets/img/nullcat/icon_nullcat.png")
+			JumboLogo
 
-              .col-md
-                h3 好きなキャラ
-                ul
-                  li ポッチャマ
-                  li ポチャッコ
-      section#links.container.p-5
-        .col-md.w-100.mb-5
-          .d-flex.flex-column.align-items-center.justify-content-center.h-100
-            img.mb-3(alt="びびびびびびっ" width="128" src="@/assets/img/nullcat/bibibi_nullcat.png")
-            h2.text-center Links
-
-        b-row
-          b-col.d-flex.w-100.justify-content-center.align-items-center.mb-5(v-for="item in linksMetaWithIndex" :key="item.id")
-            CardButton(:service-name="item.serviceName" :description="item.description" :link="item.link")
+		section.container.z-index-1.py-5
+			#buttons
+				button(@click="$router.push('/about')") About
+				button(@click="$router.push('/links')") Links
+				button(@click="$router.push('/nullcat-chan')") Nullcat chan!
 </template>
 
 <script lang="ts">
@@ -62,14 +30,6 @@ export default class IndexPage extends Vue
 	mounted()
 	{
 		this.$nuxt.$emit("update-header", this.header)
-	}
-
-	head()
-	{
-		return {
-			titleTemplate: "",
-			title: "nullc.at",
-		}
 	}
 
 	private linksMeta: LinksMeta[] = [
@@ -103,9 +63,7 @@ export default class IndexPage extends Vue
 </script>
 
 <style lang="scss" scoped>
-.hero {
-  height: 45rem;
-}
+@import "~/assets/css/ncat";
 
 .shape-black {
   position: absolute;
@@ -124,7 +82,43 @@ export default class IndexPage extends Vue
   clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
 }
 
-h3 {
-  margin-top: 2rem;
+#buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 32px;
+	font-size: 32px;
+
+	button {
+		position: relative;
+		padding-block: 8px;
+		padding-inline: 16px;
+		border-width: 0;
+		border-radius: 8px;
+		background-color: map-get($NCAT, "white");
+
+		&:hover {
+			&::before, &::after {
+				top: -12px;
+			}
+		}
+
+		&::before, &::after {
+			content: "";
+			position: absolute;
+			width: 24px;
+			height: 12px;
+			background: url("~/assets/img/nekomimi.svg");
+			transition: top 1s cubic-bezier(0, 1, 1, 1);
+		}
+
+		&::before {
+			left: 12px;
+		}
+
+		&::after {
+			right: 12px;
+		}
+	}
 }
 </style>
