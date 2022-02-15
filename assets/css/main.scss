@@ -1,15 +1,23 @@
-@import "./nyan-cs";
+@import "./ncat";
 
 body {
-    color: map-get($nyanCS, "white");
+    color: map-get($NCAT, "white");
 }
 
 // github markdown css
 .markdown-body {
-    pre > code { color: map-get($nyanCS, "brightBlue")  !important }
+    pre > code { color: map-get($NCAT, "brightBlue")  !important }
+    code { color: map-get($NCAT, "brightBlue")  !important }
+    a { color: map-get($NCAT, "blue") !important }
 }
 
-@each $key, $color in $nyanCS {
+// カーソルで選択したときの背景
+::selection {
+    color: map-get($NCAT, "black");
+    background-color: map-get($NCAT, "selectionBackground");
+}
+
+@each $key, $color in $NCAT {
     .color-bg-#{$key} {
         background-color: #{$color};
     }
@@ -19,7 +27,7 @@ body {
     }
 }
 
-@for $i from -100 through 100 {
+@for $i from -10 through 10 {
     .z-index-#{$i} {
         z-index: #{$i};
     }
