@@ -16,6 +16,7 @@
     "bootstrap": "^4.6.1",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.19.3",
+    "eslint-plugin-pug": "^1.2.4",
     "github-markdown-css": "^5.1.0",
     "marked": "^4.0.12",
     "nuxt": "^2.15.8",
