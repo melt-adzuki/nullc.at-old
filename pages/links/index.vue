@@ -1,11 +1,7 @@
 <template lang="pug">
   .color-fg-white.color-bg-black
+    PageHeader(name="Links" imagePath="nullcat/bibibi_nullcat.png")
     section#links.container.p-5
-      .col-md.w-100.mb-5
-        .d-flex.flex-column.align-items-center.justify-content-center.h-100
-          img.mb-3(alt="びびびびびびっ" width="128" src="@/assets/img/nullcat/bibibi_nullcat.png")
-          h2.text-center Links
-
       b-row
         b-col.d-flex.w-100.justify-content-center.align-items-center.mb-5(v-for="item in linksMetaWithIndex" :key="item.id")
           CardButton(:service-name="item.serviceName" :description="item.description" :link="item.link")

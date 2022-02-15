@@ -1,15 +1,16 @@
 <template lang="pug">
   div
-    <BaseHeader />
+    BaseHeader
     main
-      <Nuxt />
-    <BaseFooter />
+      Nuxt
+    BaseFooter
 </template>
 
 <script lang="ts">
-import Vue from "vue"
+import { Component, Vue } from "nuxt-property-decorator"
 
-export default Vue.extend({
-  name: "DefaultLayout",
-})
+@Component
+export default class DefaultLayout extends Vue
+{ }
+
 </script>
