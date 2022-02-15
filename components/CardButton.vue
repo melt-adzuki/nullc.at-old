@@ -12,20 +12,20 @@ import Vue from "vue"
 import Component from "vue-class-component"
 
 const Props = Vue.extend({
-  props: {
-    serviceName: { type: String, required: true },
-    description: { type: String, required: true },
-    link: { type: String, required: true },
-  },
+	props: {
+		serviceName: { type: String, required: true },
+		description: { type: String, required: true },
+		link: { type: String, required: true },
+	},
 })
 
 @Component
 export default class CardButton extends Props
 {
-  get iconName(): string
-  {
-    return `Icon${this.serviceName}`
-  }
+	get iconName(): string
+	{
+		return `Icon${this.serviceName}`
+	}
 }
 </script>
 

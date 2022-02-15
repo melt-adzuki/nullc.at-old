@@ -10,16 +10,16 @@ import { Vue, Component, Prop } from "nuxt-property-decorator"
 @Component
 export default class PageHeader extends Vue
 {
-  @Prop({ default: "" })
-  readonly name!: string
+	@Prop({ default: "" })
+	readonly name!: string
 
-  @Prop()
-  readonly imagePath!: string
+	@Prop()
+	readonly imagePath!: string
 
-  public get resolvedImagePath()
-  {
-    // eslint-disable-next-line import/no-dynamic-require, global-require
-    return require(`@/assets/img/${this.imagePath}`)
-  }
+	public get resolvedImagePath()
+	{
+		// eslint-disable-next-line import/no-dynamic-require, global-require
+		return require(`@/assets/img/${this.imagePath}`)
+	}
 }
 </script>
