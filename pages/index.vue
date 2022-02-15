@@ -66,18 +66,16 @@ export default class IndexPage extends Vue
 @import "~/assets/css/ncat";
 
 .icon{
-  	
-
   &:hover {
-	  animation: rotation 1.5s infinite linear;
+    animation: rotation 1.5s infinite linear;
 	}
   @keyframes rotation{
     from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
   }
 }
 
