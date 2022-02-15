@@ -4,7 +4,7 @@
       .shape-black.color-bg-black
         .shape.color-bg-blue
       b-container.z-index-1.d-flex.flex-column.align-items-center.justify-content-center
-        img(alt="Hi" width="400" src="@/assets/img/nullcat/icon_nullcat.png")
+        img.rounded-pill(alt="Hi" width="400" src="@/assets/img/nullcat/icon_nullcat.png")
         JumboLogo
     article.color-fg-white
       section#about.container.p-5
