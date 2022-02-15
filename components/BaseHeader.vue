@@ -1,12 +1,66 @@
 <template lang="pug">
-  header.color-bg-blue
-    .container.d-flex.flex-wrap.flex-column.flex-md-row.justify-content-center.justify-content-md-between.py-3
-      NuxtLink.d-flex.flex-column.flex-md-row.justify-content-center.align-items-center.mb-3.mb-md-0.text-dark.text-decoration-none(to="/")
-        img.mb-2.mr-0.mb-md-0.mr-md-2(alt="Logo", width="40", src="@/assets/img/nullcat/nyan_nullcat.png")
-        h1.h4.m-0.color-fg-white NullCat
-      nav
-        ul.nav.nav-pills.justify-content-center
-          li: .nav-item
-            NuxtLink.nav-link.color-fg-white(to="/nullcat-chan")
-              img.mb-2.mr-0.mb-md-0.mr-md-2(alt="Nullcat chan", width="40", src="@/assets/img/nullcat/hi_nullcat.png")
+	header.color-bg-blue
+		.container
+			#header-content
+				NuxtLink#header-title(to="/")
+					img(alt="Logo" width="40" src="@/assets/img/nullcat/nyan_nullcat.png")
+					h1 NullCat
+
+				h2 {{ title }}
+
+				NuxtLink#hamburger-menu(to="/nullcat-chan")
+					img(alt="Nullcat chan" width="40" src="@/assets/img/nullcat/hi_nullcat.png")
 </template>
+
+<script lang="ts">
+import { Vue, Component } from "nuxt-property-decorator"
+
+@Component
+export default class BaseHeader extends Vue
+{
+	public title = ""
+
+	private setHeader(header: Header)
+	{
+		this.title = header.title
+	}
+
+	mounted()
+	{
+		this.$nuxt.$on("update-header", this.setHeader)
+	}
+}
+</script>
+
+<style lang="scss" scoped>
+@import "~/assets/css/ncat";
+
+#header-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding-block: 16px;
+
+	h1, h2 {
+		font-size: 24px;
+		margin: 0;
+	}
+}
+
+#header-title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	color: map-get($NCAT, "white");
+}
+
+#hamburger-menu {
+	position: absolute;
+	right: 0;
+
+	img {
+		transform: rotate(270deg);
+	}
+}
+</style>

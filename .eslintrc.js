@@ -52,6 +52,7 @@ module.exports = {
 			"allman",
 		],
 		"max-len": 0,
+		"no-undef": 0,
 		"class-methods-use-this": 0,
 	},
 }

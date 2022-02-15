@@ -55,6 +55,15 @@ type LinksMeta = { serviceName: string, description: string, link: string }
 @Component
 export default class IndexPage extends Vue
 {
+	private readonly header: Header = {
+		title: "Home",
+	}
+
+	mounted()
+	{
+		this.$nuxt.$emit("update-header", this.header)
+	}
+
 	head()
 	{
 		return {

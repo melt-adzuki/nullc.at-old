@@ -15,10 +15,19 @@ type LinksMeta = { serviceName: string, description: string, link: string }
 @Component
 export default class LinksPage extends Vue
 {
+	private readonly header: Header = {
+		title: "Links",
+	}
+
+	mounted()
+	{
+		this.$nuxt.$emit("update-header", this.header)
+	}
+
 	head()
 	{
 		return {
-			title: "Links",
+			title: this.header.title,
 		}
 	}
 
