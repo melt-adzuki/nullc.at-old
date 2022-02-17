@@ -5,7 +5,7 @@
 			.shape.color-bg-blue
 
 		section.container.z-index-1.d-flex.flex-column.align-items-center.justify-content-center.py-5
-			img.rounded-pill(alt="Icon" width="400" src="@/assets/img/nullcat/icon_nullcat.png")
+			img.icon.rounded-pill(alt="Icon" width="400" src="@/assets/img/nullcat/icon_nullcat.png")
 			JumboLogo
 
 		section.container.z-index-1.py-5
@@ -34,6 +34,20 @@ export default class IndexPage extends Vue
 
 <style lang="scss" scoped>
 @import "~/assets/css/ncat";
+
+.icon{
+  &:hover {
+    animation: rotation 1.5s infinite linear;
+	}
+  @keyframes rotation{
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+}
 
 .shape-black {
   position: absolute;
