@@ -1,7 +1,7 @@
 <template lang="pug">
   .color-fg-white.color-bg-black
-    PageHeader(name="Links" imagePath="nullcat/bibibi_nullcat.png")
-    section#links.container.p-5
+    PageHeader(imagePath="nullcat/bibibi_nullcat.png")
+    section.container.p-5
       b-row
         b-col.d-flex.w-100.justify-content-center.align-items-center.mb-5(v-for="item in linksMetaWithIndex" :key="item.id")
           CardButton(:service-name="item.serviceName" :description="item.description" :link="item.link")
@@ -60,30 +60,3 @@ export default class LinksPage extends Vue
 	}
 }
 </script>
-
-<style lang="scss" scoped>
-.hero {
-  height: 45rem;
-}
-
-.shape-black {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.shape {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
-}
-
-h3 {
-  margin-top: 2rem;
-}
-</style>
