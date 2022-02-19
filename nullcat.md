@@ -16,13 +16,13 @@
 	- APEX
 	- Valorant 
 - 曲をきく
-	-	[kikuo](https://www.youtube.com/channel/UCq3vSkJtBZdBjC8yrG-1xmA) 
-	-	[iyowa](https://www.youtube.com/channel/UCLz6MG2kx_0xeaW0LowYnMQ)
+	- [kikuo](https://www.youtube.com/channel/UCq3vSkJtBZdBjC8yrG-1xmA) 
+	- [iyowa](https://www.youtube.com/channel/UCLz6MG2kx_0xeaW0LowYnMQ)
 
 ### 環境
 
-- OS Windows10Pro & Ubuntu
-- エディタ VScode
+- OS Windows10Pro & Ubuntu & Android12L
+- IDE WebStorm
 - ターミナル WindowsTerminal
 - シェル Powershell7 & Bash
 - キーボード REALFORCE R3
