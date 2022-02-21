@@ -5,7 +5,11 @@
 			.shape.color-bg-blue
 
 		section.container.z-index-1.d-flex.flex-column.align-items-center.justify-content-center.py-5
-			img.icon.rounded-pill(alt="Icon" width="400" src="@/assets/img/nullcat/icon_nullcat.png")
+			img.icon.rounded-pill(
+				alt="Icon",
+				width="400",
+				src="@/assets/img/nullcat/icon_nullcat.png"
+			)
 			JumboLogo
 
 		section.container.z-index-1.py-5
@@ -35,35 +39,35 @@ export default class IndexPage extends Vue
 <style lang="scss" scoped>
 @import "~/assets/css/ncat";
 
-.icon{
-  &:hover {
-    animation: rotation 1.5s infinite linear;
+.icon {
+	&:hover {
+		animation: rotation 1.5s infinite linear;
 	}
-  @keyframes rotation{
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
-  }
+	@keyframes rotation {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(359deg);
+		}
+	}
 }
 
 .shape-black {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .shape {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
 }
 
 #buttons {
@@ -81,7 +85,8 @@ export default class IndexPage extends Vue
 		border-radius: 8px;
 		background-color: map-get($NCAT, "white");
 
-		&::before, &::after {
+		&::before,
+		&::after {
 			content: "";
 			position: absolute;
 			width: 24px;
@@ -91,7 +96,8 @@ export default class IndexPage extends Vue
 		}
 
 		&:hover {
-			&::before, &::after {
+			&::before,
+			&::after {
 				top: -12px;
 			}
 		}

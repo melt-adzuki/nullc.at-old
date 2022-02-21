@@ -1,16 +1,23 @@
 <template lang="pug">
-  .color-fg-white.color-bg-black
-    PageHeader(imagePath="nullcat/bibibi_nullcat.png")
-    section.container.p-5
-      b-row
-        b-col.d-flex.w-100.justify-content-center.align-items-center.mb-5(v-for="item in linksMetaWithIndex" :key="item.id")
-          CardButton(:service-name="item.serviceName" :description="item.description" :link="item.link")
+.color-fg-white.color-bg-black
+  PageHeader(imagePath="nullcat/bibibi_nullcat.png")
+  section.container.p-5
+    b-row
+      b-col.d-flex.w-100.justify-content-center.align-items-center.mb-5(
+        v-for="item in linksMetaWithIndex",
+        :key="item.id"
+      )
+        CardButton(
+          :service-name="item.serviceName",
+          :description="item.description",
+          :link="item.link"
+        )
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator"
 
-type LinksMeta = { serviceName: string, description: string, link: string }
+type LinksMeta = { serviceName: string; description: string; link: string };
 
 @Component
 export default class LinksPage extends Vue
@@ -33,22 +40,34 @@ export default class LinksPage extends Vue
 
 	private linksMeta: LinksMeta[] = [
 		{
-			serviceName: "Twitter", description: "nullnyat", link: "https://twitter.com/nullnyat",
+			serviceName: "Twitter",
+			description: "nullnyat",
+			link: "https://twitter.com/nullnyat",
 		},
 		{
-			serviceName: "GitHub", description: "nullnyat", link: "https://github.com/nullnyat",
+			serviceName: "GitHub",
+			description: "nullnyat",
+			link: "https://github.com/nullnyat",
 		},
 		{
-			serviceName: "Pixiv", description: "nullnyat", link: "https://www.pixiv.net/users/74107311",
+			serviceName: "Pixiv",
+			description: "nullnyat",
+			link: "https://www.pixiv.net/users/74107311",
 		},
 		{
-			serviceName: "Discord", description: "nullnyat#3595", link: "https://discord.com/users/839568515848470538",
+			serviceName: "Discord",
+			description: "nullnyat#3595",
+			link: "https://discord.com/users/839568515848470538",
 		},
 		{
-			serviceName: "Keybase", description: "nullnyat", link: "https://keybase.io/nullnyat",
+			serviceName: "Keybase",
+			description: "nullnyat",
+			link: "https://keybase.io/nullnyat",
 		},
 		{
-			serviceName: "Steam", description: "nullnyat", link: "https://steamcommunity.com/profiles/76561199215911227",
+			serviceName: "Steam",
+			description: "nullnyat",
+			link: "https://steamcommunity.com/profiles/76561199215911227",
 		},
 	]
 

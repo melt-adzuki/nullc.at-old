@@ -29,7 +29,10 @@ export default class MarkdownContent extends Vue
 			{ headers },
 		)
 
-		if (response.status !== 200) throw new Error("正常にデータを取得できませんでした。")
+		if (response.status !== 200)
+		{
+			throw new Error("正常にデータを取得できませんでした。")
+		}
 
 		const data = await response.json()
 		this.content = Buffer.from(data.content, "base64").toString()

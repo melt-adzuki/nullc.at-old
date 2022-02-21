@@ -1,7 +1,7 @@
 <template lang="pug">
-  .color-fg-white.color-bg-black
-    PageHeader(imagePath="nullcat/nyan_nullcat.png")
-    MarkdownContent(repoUrl="NullCatSlave/nullc.at" filePath="nullcat.md")
+.color-fg-white.color-bg-black
+  PageHeader(imagePath="nullcat/nyan_nullcat.png")
+  MarkdownContent(repoUrl="NullCatSlave/nullc.at", filePath="nullcat.md")
 </template>
 
 <script lang="ts">

@@ -31,17 +31,17 @@ export default class CardButton extends Props
 
 <style lang="scss" scoped>
 .card-button {
-    width: 15rem;
-    height: 20rem;
-    border-width: 0;
-    background-color: rgb(250, 250, 250);
+	width: 15rem;
+	height: 20rem;
+	border-width: 0;
+	background-color: rgb(250, 250, 250);
 
-    &:hover {
-        background-color: rgb(245, 245, 245);
-    }
+	&:hover {
+		background-color: rgb(245, 245, 245);
+	}
 }
 
 .icon {
-    width: 4rem;
+	width: 4rem;
 }
 </style>

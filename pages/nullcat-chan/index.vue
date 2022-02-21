@@ -1,5 +1,5 @@
 <template lang="pug">
-  MarkdownContent(repoUrl="NullCatSlave/Nullcatchan" filePath="torisetu.md")
+MarkdownContent(repoUrl="NullCatSlave/Nullcatchan", filePath="torisetu.md")
 </template>
 
 <script lang="ts">
