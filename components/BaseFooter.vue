@@ -10,6 +10,6 @@ footer.text-light.color-bg-black
 
 <style lang="scss" scoped>
 p {
-    margin: 0;
+	margin: 0;
 }
 </style>

@@ -42,7 +42,8 @@ export default class BaseHeader extends Vue
 	align-items: center;
 	padding-block: 16px;
 
-	h1, h2 {
+	h1,
+	h2 {
 		font-size: 24px;
 		margin: 0;
 	}
