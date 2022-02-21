@@ -17,6 +17,7 @@ body {
     background-color: map-get($NCAT, "selectionBackground");
 }
 
+// スクロールバー
 ::-webkit-scrollbar {
 	display: none;
 }
