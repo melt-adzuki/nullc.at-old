@@ -17,6 +17,11 @@ body {
     background-color: map-get($NCAT, "selectionBackground");
 }
 
+// スクロールバー
+::-webkit-scrollbar {
+	display: none;
+}
+
 @each $key, $color in $NCAT {
     .color-bg-#{$key} {
         background-color: #{$color};
