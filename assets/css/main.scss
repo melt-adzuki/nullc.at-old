@@ -1,5 +1,10 @@
 @import "./ncat";
 
+* {
+    scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
 body {
     color: map-get($NCAT, "white");
 }
