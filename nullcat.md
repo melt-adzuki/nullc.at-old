@@ -21,7 +21,7 @@
 
 ### 環境
 
-- OS Windows10Pro & Ubuntu & Android12L
+- OS Windows10Pro & Android12L
 - IDE WebStorm
 - ターミナル WindowsTerminal
 - シェル Pwsh7 & Zsh
