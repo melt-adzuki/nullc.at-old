@@ -12,8 +12,6 @@
 - かわいいもの
 - パステルブルー
 - 曲をきく
-	- [kikuo](https://www.youtube.com/channel/UCq3vSkJtBZdBjC8yrG-1xmA) 
-	- [iyowa](https://www.youtube.com/channel/UCLz6MG2kx_0xeaW0LowYnMQ)
 
 ### 環境
 
