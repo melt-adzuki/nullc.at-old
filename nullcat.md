@@ -24,7 +24,7 @@
 - OS Windows10Pro & Ubuntu & Android12L
 - IDE WebStorm
 - ターミナル WindowsTerminal
-- シェル Powershell7 & Bash
-- キーボード REALFORCE R3
+- シェル Pwsh7 & Zsh
+- キーボード REALFORCE R3 & HHKB Type-S
 - マウス M575OW
-- モニター 4枚
+- モニター 3枚
