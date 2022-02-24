@@ -9,19 +9,14 @@
 
 <script lang="ts">
 import Vue from "vue"
-import Component from "vue-class-component"
-
-const Props = Vue.extend({
-	props: {
-		serviceName: { type: String, required: true },
-		description: { type: String, required: true },
-		link: { type: String, required: true },
-	},
-})
+import { Component, Prop } from "nuxt-property-decorator"
 
 @Component
-export default class CardButton extends Props
+export default class CardButton extends Vue
 {
+	@Prop()
+	private readonly serviceName!: string
+
 	get iconName(): string
 	{
 		return `Icon${this.serviceName}`
